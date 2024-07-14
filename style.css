@@ -7,3 +7,43 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+#header {
+  background-color: black;
+  color: beige;
+}
+
+#movie-wrapper{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.photo{
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 20px;
+  background-color: black;
+  color: beige;
+}
+
+.photo img{
+  width: 500px;
+  height: 500px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#sidebar {
+  background-color: black;
+  color: beige;
+  width: 1500px;
+  height: 350px;
+}
