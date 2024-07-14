@@ -6,7 +6,6 @@ fetch(url)
     const filmList = document.querySelector("#sidebar");
     
 
-    // Populate the film list
     films.forEach((film) => {
       const li = document.createElement("li");
       li.className = "film item";
@@ -17,7 +16,6 @@ fetch(url)
   })
   .catch((error) => console.error("Error fetching films:", error));
 
-// Function to display film details
 function displayFilmDetails(film) {
   createPhoto(film);
 }
