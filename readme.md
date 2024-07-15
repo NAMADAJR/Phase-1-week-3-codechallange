@@ -5,11 +5,13 @@
 ## Project Description
 The project is a web application called "Flatdango-Flatiron Movie Theater". It is a movie theater website where users can browse and purchase tickets for movies. The website is built using HTML, CSS, and JavaScript.
 
+Here is the link to the website : [(https://namadajr.github.io/Phase-1-week-3-codechallange/)](https://namadajr.github.io/Phase-1-week-3-codechallange/)
+
 The website has the following features:
 
 -A landing page with a header and a container for displaying movie posters.
 
--A sidebar on the left side of the container that displays movie details such as title, runtime, showtime, and tickets sold.
+-A sidebar on the left side of the container that displays movies available,
 
 -Each movie poster has a button to purchase tickets.
 
