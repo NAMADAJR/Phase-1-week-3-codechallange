@@ -5,21 +5,19 @@ fetch(url)
   .then((films) => {
     const filmList = document.querySelector("#sidebar");
     
-
     films.forEach((film) => {
       const li = document.createElement("li");
       li.className = "film item";
       li.textContent = film.title;
-      
+
       filmList.appendChild(li);
     });
   })
-  .catch((error) => console.error("Error fetching films:", error));
+
 
 function displayFilmDetails(film) {
   createPhoto(film);
 }
-
 
 fetch(url)
   .then((response) => response.json())
@@ -68,32 +66,19 @@ function createPhoto(photo) {
   wrapper.appendChild(divCard);
 }
 
-
-
 function bought(id, capacity, tickets_sold) {
-  const ticketsLeft = capacity - tickets_sold;
+  const ticketsLeftElement = document.getElementById(`tickets-left-${id}`);
+  let ticketsLeft = parseInt(ticketsLeftElement.textContent.split(': ')[1]);
 
   if (ticketsLeft <= 0) {
     alert("Tickets sold out");
     return;
-  } else {
-    const updatedTicketsSold = tickets_sold + 1;
-
-    fetch(`${url}/${id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        tickets_sold: updatedTicketsSold,
-      }),
-    })
-      .then((response) => response.json())
-      .then((film) => {
-        document.getElementById(`tickets-left-${id}`).
-        textContent = `Tickets Left: ${capacity - film.tickets_sold}`;
-        console.log("Ticket bought successfully");
-      })
   }
+
+  ticketsLeft -= 1;
+  ticketsLeftElement.textContent = `Tickets Left: ${ticketsLeft}`;
 }
+
+
+
 
